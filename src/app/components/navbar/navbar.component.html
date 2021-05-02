@@ -1,0 +1,28 @@
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <a class="navbar-brand" href="#">Primer Parcial</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" [routerLink]="'/bienvenidos'" routerLinkActive="active">Bienvenidos</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" [routerLink]="'/buscarPelicula'" routerLinkActive="active">Buscar Pelicula</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" [routerLink]="'/actor/actorPelicula'" routerLinkActive="active">Buscar Actor</a>
+            </li>
+        </ul>
+
+    </div>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkupR">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link disabled" aria-current="page">Mariano Garcia Mastronardi (Legajo 108050)</a>
+            </li>
+        </ul>
+    </div>
+</nav>
