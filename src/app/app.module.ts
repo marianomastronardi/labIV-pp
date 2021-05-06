@@ -14,6 +14,9 @@ import { BienvenidaComponent } from './components/pages/bienvenida/bienvenida.co
 import { LoginComponent } from './components/pages/login/login.component';
 import { AltaRepartidorComponent } from './components/alta-repartidor/alta-repartidor.component';
 import { TablaPaisesComponent } from './components/tabla-paises/tabla-paises.component';
+import { RepartidorDetalleComponent } from './components/repartidor-detalle/repartidor-detalle.component';
+import { RepDetailsComponent } from './components/rep-details/rep-details.component';
+import { PaisDetailsComponent } from './components/pais-details/pais-details.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +25,10 @@ import { TablaPaisesComponent } from './components/tabla-paises/tabla-paises.com
     BienvenidaComponent,
     LoginComponent,
     AltaRepartidorComponent,
-    TablaPaisesComponent
+    TablaPaisesComponent,
+    RepartidorDetalleComponent,
+    RepDetailsComponent,
+    PaisDetailsComponent
   ],
   imports: [
     BrowserModule,
