@@ -1,0 +1,66 @@
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-4 order-md-2 mb-4">
+            <app-tabla-paises (eventSendCountry)="setCountry($event)"></app-tabla-paises>
+        </div>
+        <div class="col-md-8 order-md-1">
+            <h4 class="mb-3">Alta Repartidor</h4>
+            <form class="needs-validation" [formGroup]="fg" (ngSubmit)="save()">
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label for="firstName">Nombre</label>
+                        <input type="text" class="form-control" id="firstName" [(ngModel)]="repartidor.nombre" placeholder="Ingrese un nombre" formControlName="nombre">
+                        <small class="invalid" *ngIf="fg.get('nombre')?.errors?.required && fg.get('nombre')?.touched">El nombre es
+                            requerido</small>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="dni">DNI</label>
+                        <input type="text" class="form-control" id="dni" [(ngModel)]="repartidor.dni" placeholder="Ingrese el dni" formControlName="dni">
+                        <small class="invalid" *ngIf="fg.get('dni')?.errors?.required && fg.get('dni')?.touched">El dni es
+                            requerido</small>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label for="country">Pais</label>
+                        <input type="text" class="form-control" id="country" [(ngModel)]="repartidor.paisOrigen.name" placeholder="Ingrese un pais" formControlName="country">
+                        <small class="invalid" *ngIf="fg.get('country')?.errors?.required && fg.get('country')?.touched">El pais es
+                            requerido</small>
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+                        <label for="edad">Edad</label>
+                        <input type="number" class="form-control" id="edad" [(ngModel)]="repartidor.edad" formControlName="edad">
+                        <small class="invalid" *ngIf="fg.get('edad')?.errors?.required && fg.get('edad')?.touched">La
+                            edad es requerida</small>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label for="edad">capacidadTransporte</label>
+                        <input type="number" class="form-control" id="edad" [(ngModel)]="repartidor.capacidadTransporte" formControlName="capacidadTransporte">
+                        <small class="invalid" *ngIf="fg.get('capacidadTransporte')?.errors?.required && fg.get('capacidadTransporte')?.touched">La
+                            capacidadTransporte es requerida</small>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="country">unidadPropia</label>
+                        <select class="custom-select d-block w-100" id="unidadPropia" [(ngModel)]="repartidor.unidadPropia" formControlName="unidadPropia">
+                            <option value="true">Si</option>
+                            <option value="false">No</option>
+                        </select>
+                        <small class="invalid" *ngIf="fg.get('unidadPropia')?.errors?.required && fg.get('unidadPropia')?.touched">El unidadPropia es requerido</small>
+                    </div>
+                </div>
+
+                <hr class="mb-4">
+                <button class="btn btn-primary btn-lg btn-block" [disabled]="this.fg.status == 'INVALID'" type="submit">Guardar</button>
+                <hr>
+                <div class="alert alert-warning" *ngIf="!formValid" role="alert">
+                    Debe completar todos los campoos.
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
