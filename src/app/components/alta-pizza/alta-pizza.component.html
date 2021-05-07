@@ -1,0 +1,10 @@
+<div class="card-header py-3">
+    <h4 class="my-0 fw-normal">Nueva Pizza</h4>
+</div>
+<div class="card-body">
+    <input type="text" class="form-control" placeholder="nombre" [(ngModel)]="pizza.nombre">
+    <input type="text" class="form-control" placeholder="ingredientes" [(ngModel)]="pizza.ingredientes">
+    <input type="number" class="form-control" placeholder="peso" [(ngModel)]="pizza.peso">
+    <input type="number" class="form-control" placeholder="precio" [(ngModel)]="pizza.precio">
+    <button type="button" class="w-100 btn btn-lg btn-outline-primary" (click)="save()">Guardar</button>
+</div>

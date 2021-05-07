@@ -17,6 +17,8 @@ import { TablaPaisesComponent } from './components/tabla-paises/tabla-paises.com
 import { RepartidorDetalleComponent } from './components/repartidor-detalle/repartidor-detalle.component';
 import { RepDetailsComponent } from './components/rep-details/rep-details.component';
 import { PaisDetailsComponent } from './components/pais-details/pais-details.component';
+import { SalenPizzasComponent } from './components/pages/salen-pizzas/salen-pizzas.component';
+import { AltaPizzaComponent } from './components/alta-pizza/alta-pizza.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import { PaisDetailsComponent } from './components/pais-details/pais-details.com
     TablaPaisesComponent,
     RepartidorDetalleComponent,
     RepDetailsComponent,
-    PaisDetailsComponent
+    PaisDetailsComponent,
+    SalenPizzasComponent,
+    AltaPizzaComponent
   ],
   imports: [
     BrowserModule,

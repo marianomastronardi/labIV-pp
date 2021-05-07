@@ -1,12 +1,16 @@
 <body class="text-center">
 
-    <form class="form-signin">
+    <form class="form-signin" [formGroup]="fg">
         <img class="mb-4" src="/docs/4.6/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
         <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
         <label for="inputEmail" class="sr-only">Email address</label>
-        <input type="email" id="inputEmail" class="form-control" placeholder="Email address">
+        <input type="email" id="inputEmail" class="form-control" placeholder="Email address" formControlName="email">
+        <small class="invalid" *ngIf="fg.get('email')?.errors?.required && fg.get('email')?.touched">El email es
+          requerido</small>
         <label for="inputPassword" class="sr-only">Password</label>
-        <input type="password" id="inputPassword" class="form-control" placeholder="Password">
+        <input type="password" id="inputPassword" class="form-control" placeholder="Password" formControlName="password">
+        <small class="invalid" *ngIf="fg.get('password')?.errors?.required && fg.get('password')?.touched">El password es
+          requerido</small>
         <!--       <div class="checkbox mb-3">
         <label>
           <input type="checkbox" value="remember-me"> Remember me
